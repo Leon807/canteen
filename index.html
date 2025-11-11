@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食堂点餐系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container" id="login-container">
+        <div class="login-box">
+            <h2>用户登录</h2>
+            <div class="role-selector">
+                <label>
+                    <input type="radio" name="user-role" value="user" checked> 普通用户
+                </label>
+                <label>
+                    <input type="radio" name="user-role" value="admin"> 管理员
+                </label>
+            </div>
+            <div class="admin-password" style="display: none;">
+                <input type="password" id="admin-password" placeholder="管理员密码（默认: admin123）">
+            </div>
+            <button id="login-btn">登录</button>
+        </div>
+    </div>
+
+    <div class="container" id="app-container" style="display: none;">
+        <header>
+            <h1>食堂点餐系统</h1>
+            <div class="user-info">
+                <span id="user-role-display">普通用户</span>
+                <button id="logout-btn">退出登录</button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="menu-section">
+                <h2>今日菜单</h2>
+                <div id="menu-items" class="menu-items">
+                    <!-- 菜单项目将通过JavaScript动态添加 -->
+                </div>
+            </section>
+            
+            <section class="order-section">
+                <h2>我的订单</h2>
+                <div id="order-items" class="order-items">
+                    <p class="empty-order">暂无订单，请添加菜品</p>
+                </div>
+                <div class="order-summary">
+                    <div class="total-price">
+                        <span>总计：</span>
+                        <span id="total-price">¥0.00</span>
+                    </div>
+                    <button id="clear-order">清空订单</button>
+                </div>
+            </section>
+        </main>
+        
+        <section class="admin-section">
+            <div class="admin-controls">
+                <h2>菜单管理</h2>
+                <button id="toggle-library">显示菜品库</button>
+            </div>
+        </section>
+        
+        <section id="dish-library-section" class="dish-library-section" style="display: none;">
+            <h2>菜品库（点击添加或移除菜品）</h2>
+            <div id="dish-library-items" class="menu-items">
+                <!-- 菜品库项目将通过JavaScript动态添加 -->
+            </div>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
