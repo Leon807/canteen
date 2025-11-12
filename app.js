@@ -7,7 +7,7 @@ let dishes = [
         id: 1,
         name: "宫保鸡丁",
         price: 15.00,
-        image: "https://picsum.photos/seed/dish1/300/200"
+        image: "https://p5.ssl.qhimgs1.com/t03240144f5cd2d192f.jpg"
     },
     {
         id: 2,
